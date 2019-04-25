@@ -1,0 +1,9 @@
+env:
+- name: DEPLOY_NAMESPACE
+  value: myrelease
+pipelineConfig:
+  agent: {}
+  env:
+  - name: DEPLOY_NAMESPACE
+    value: myrelease
+  pipelines: {}
