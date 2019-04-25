@@ -1,9 +1,9 @@
 env:
 - name: DEPLOY_NAMESPACE
-  value: myrelease
+  value: martha-pre
 pipelineConfig:
   agent: {}
   env:
   - name: DEPLOY_NAMESPACE
-    value: myrelease
+    value: martha-pre
   pipelines: {}
