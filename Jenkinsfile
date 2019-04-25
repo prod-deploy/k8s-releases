@@ -6,7 +6,7 @@ pipeline {
     label "jenkins-maven"
   }
   environment {
-    DEPLOY_NAMESPACE = "myrelease"
+    DEPLOY_NAMESPACE = "hercules-prod"
   }
   stages {
     stage('Validate Environment') {
@@ -20,7 +20,7 @@ pipeline {
     }
     stage('Update Environment') {
       when {
-        branch 'master'
+        branch 'hercules-prod'
       }
       steps {
         container('maven') {
