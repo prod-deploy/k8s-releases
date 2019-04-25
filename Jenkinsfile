@@ -6,7 +6,7 @@ pipeline {
     label "jenkins-maven"
   }
   environment {
-    DEPLOY_NAMESPACE = "-prod"
+    DEPLOY_NAMESPACE = "myrelease"
   }
   stages {
     stage('Validate Environment') {
@@ -20,7 +20,7 @@ pipeline {
     }
     stage('Update Environment') {
       when {
-        branch '-prod'
+        branch 'master'
       }
       steps {
         container('maven') {
