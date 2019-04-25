@@ -17,7 +17,7 @@ expose:
     domain: curefit.co
     exposer: Ingress
     http: "true"
-    urltemplate: '"{{.Service}}.{{.Domain}}"'
+    urltemplate: '"{{.Service}}.pre.{{.Domain}}"'
 jenkins:
   Servers:
     Global: {}
