@@ -1,6 +1,6 @@
 CHART_REPO := http://jenkins-x-chartmuseum:8080
 DIR := "env"
-NAMESPACE := "myrelease"
+NAMESPACE := "doorman-pre"
 OS := $(shell uname)
 
 build: clean
