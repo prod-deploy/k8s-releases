@@ -10,6 +10,9 @@ pipeline {
   }
   stages {
     stage('Validate Environment') {
+      when {
+        branch 'doorman-pre'
+      }
       steps {
         container('maven') {
           dir('env') {
