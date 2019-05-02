@@ -10,6 +10,9 @@ pipeline {
   }
   stages {
     stage('Validate Environment') {
+      when {
+        branch 'catalog-service-pre'
+      }
       steps {
         container('maven') {
           dir('env') {
