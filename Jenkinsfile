@@ -10,6 +10,9 @@ pipeline {
   }
   stages {
     stage('Validate Environment') {
+      when {
+        branch 'antman-pre'
+      }
       steps {
         container('maven') {
           dir('env') {
